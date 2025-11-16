@@ -1,0 +1,64 @@
+\newcommand{\MeetingDate}{<<<DATA_MEETING>>>}
+\newcommand{\MeetingStartingTime}{<<<ORA_INIZIO_MEETING>>>}
+\newcommand{\MeetingEndingTime}{<<<ORA_FINE_MEETING>>>}
+\newcommand{\Location}{<<<LUOGO_MEETING>>>}
+\newcommand{\Chair}{<<<RESPONSABILE>>>}
+\newcommand{\Attendees}{<<<PRESENTI>>>}
+\newcommand{\Assenti}{<<<ASSENTI>>>}
+
+\fancyhead[L]{Verbale riunione}
+\fancyhead[R]{\MeetingDate}
+\newpage
+\section{Informazioni generali}
+\subsection{Apertura}
+La riunione, svolta su \Location, ha avuto inizio alle \MeetingStartingTime, introdotta da \Chair, 
+che ha illustrato brevemente gli obiettivi del giorno.
+
+\subsection{Presenti e assenti}
+\begin{tabular}{@{}p{0.48\textwidth} p{0.48\textwidth}@{}}
+\textbf{Presenti:} & \Attendees \\
+\textbf{Assenti:} & \Assenti \\
+\end{tabular}
+
+\vspace{1em}
+
+\section{Ordine del giorno}
+\begin{enumerate}
+\AgendaItems
+\end{enumerate}
+
+\vspace{1em}
+
+\section{Svolgimento della Riunione}
+\SectionsVerbale
+
+
+\section{Azioni e responsabilità}
+\begin{longtable}{p{0.42\textwidth} p{0.22\textwidth} p{0.16\textwidth} p{0.16\textwidth}}
+\toprule
+\textbf{Azione} & \textbf{Responsabile} & \textbf{Scadenza} & \textbf{Stato} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Azione} & \textbf{Responsabile} & \textbf{Scadenza} & \textbf{Stato} \\
+\midrule
+\endhead
+\ActionsAndResponsibilities
+\bottomrule
+\end{longtable}
+\section*{Chiusura}
+La riunione si è conclusa alle \MeetingEndingTime.
+
+\vspace{2em}
+
+\noindent\begin{tabular}{@{}p{0.48\textwidth}@{}}
+  \textbf{Presiede:} \\
+  \\[2.5em]
+  \rule{0.9\linewidth}{0.6pt} \\
+  \Chair \\
+\end{tabular}
+
+\vfill
+\hrulefill
+
+\end{document}

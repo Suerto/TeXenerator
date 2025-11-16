@@ -1,0 +1,75 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{float}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{helvet}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+\usepackage{pdfpages}
+\usepackage{longtable}
+\usepackage[colorlinks=true, linkcolor=black, urlcolor=blue]{hyperref}
+
+\geometry{margin=2.5cm}
+\setstretch{1.0}
+
+\begin{document}
+
+\newcommand{\titoloDocumento}{<<<TITOLO>>>}
+\newcommand{\dataDocumento}{<<<DATA>>>}
+\newcommand{\emailGruppo}{skarabswegroup@gmail.com}
+\newcommand{\redattoreDocumento}{<<<REDATTORE>>>}
+\pagenumbering{gobble}
+\begin{titlepage}
+\centering
+
+\vspace*{\fill}
+
+\includegraphics[width=0.4\linewidth]{skarablogo_.jpg}
+\vspace{1cm}
+
+{\Huge \textbf{Skarab Group}}\\[0.5cm]
+
+\rule{0.8\textwidth}{0.5pt}\\[0.5cm]
+
+{\LARGE \textbf{\titoloDocumento}}\\[0.5cm]
+
+\rule{0.8\textwidth}{0.5pt}
+\vspace*{\fill}
+\begin{center}
+    \emailGruppo
+\end{center}
+\vspace*{\fill}
+
+\end{titlepage}
+\newpage
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\textbf{Skarab Group - Anno accademico 2025/2026}}
+\fancyfoot[C]{\thepage}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\section*{Versionamento e changelog}
+\begin{center}
+\begin{tabular}{|>{\centering\arraybackslash}m{2.5cm}|
+                >{\centering\arraybackslash}m{1.7cm}|
+                >{\centering\arraybackslash}m{5.0cm}|
+                >{\centering\arraybackslash}m{2.5cm}|
+                >{\centering\arraybackslash}m{2.5cm}|}
+\hline
+\rowcolor{gray!30}
+\textbf{Data Modifica} & \textbf{Versione} & \textbf{Descrizione Modifica} & \textbf{Redattore} & \textbf{Verificatore}\\ 
+\hline
+<<<DATA_MODIFICA>>> & <<<VERSIONE>>> & <<<DESC_MODIFICA>>> & <<<REDATTORE>>> & <<<VERIFICATORE>>> \\
+\hline
+\end{tabular}
+\end{center}
+\newpage
+\tableofcontents
