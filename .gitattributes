@@ -1,0 +1,4 @@
+*.tex -linguist-detectable
+*.typ -linguist-detectable
+*.bat -linguist-detectable
+*.sh  -linguist-detectable
