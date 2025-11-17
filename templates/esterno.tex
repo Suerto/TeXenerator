@@ -1,0 +1,68 @@
+\newcommand{\MeetingDate}{<<<DATA_MEETING>>>}
+\newcommand{\MeetingStartingTime}{<<<ORA_INIZIO_MEETING>>>}
+\newcommand{\MeetingEndingTime}{<<<ORA_FINE_MEETING>>>}
+\newcommand{\Location}{<<<LUOGO_MEETING>>>}
+\newcommand{\Chair}{<<<RESPONSABILE>>>}
+\newcommand{\Attendees}{<<<PRESENTI>>>}
+\newcommand{\Assenti}{<<<ASSENTI>>>}
+\newcommand{\Managers}{<<<REF_AZIENDA>>>}
+
+\fancyhead[L]{Verbale riunione}
+\fancyhead[R]{\MeetingDate}
+\newpage
+\section{Informazioni generali}
+\subsection{Apertura}
+La riunione, svolta in \Location, ha avuto inizio alle \MeetingStartingTime, introdotta da \Chair, 
+che ha illustrato brevemente gli obiettivi del giorno.
+
+\subsection{Presenti e assenti}
+\begin{tabular}{@{}p{0.48\textwidth} p{0.48\textwidth}@{}}
+\textbf{Presenti:} & \Attendees \\
+\textbf{Assenti:} & \Assenti \\
+\textbf{Referenti Aziendali:} & \Managers \\
+\end{tabular}
+
+\vspace{1em}
+
+\section{Ordine del giorno}
+\begin{enumerate}
+\AgendaItems
+\end{enumerate}
+
+\vspace{1em}
+
+\section{Svolgimento della Riunione}
+\SectionsVerbale
+
+
+\section{Azioni e responsabilità}
+\begin{longtable}{p{0.42\textwidth} p{0.22\textwidth} p{0.16\textwidth} p{0.16\textwidth}}
+\toprule
+\textbf{Azione} & \textbf{Responsabile} & \textbf{Scadenza} & \textbf{Stato} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Azione} & \textbf{Responsabile} & \textbf{Scadenza} & \textbf{Stato} \\
+\midrule
+\endhead
+\ActionsAndResponsibilities
+\bottomrule
+\end{longtable}
+\section*{Chiusura}
+La riunione si è conclusa alle \MeetingEndingTime.
+
+\vspace{2em}
+
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+  \textbf{Responsabile Team Skarab:} \\[2.5em]
+  \rule{0.9\linewidth}{0.6pt} \\[0.5em]
+  \Chair
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+  \textbf{Referente Aziendale:} \\[2.5em]
+  \rule{0.9\linewidth}{0.6pt} \\[0.5em]
+  Var Group S.p.A
+\end{minipage}
+\end{document}

@@ -1,3 +1,4 @@
+# Generatore del documento Verbale Interno
 def generate(template):
     print("\n=== Verbale Interno ===\n")
 
