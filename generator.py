@@ -2,15 +2,16 @@ import os
 import sys
 import importlib.util
 
-TEMPLATES_DIR = "../DocumentazioneProgetto/docs-template"
-MODULES_DIR = "generators"
+TEMPLATES_DIR = "templates"
+MODULES_DIR = "modules"
 OUTPUT_DIR = "output"
 
 def get_template(document: str) -> str:
     if not os.path.exists(f"{TEMPLATES_DIR}/{document}.tex"):
         raise FileNotFoundError("Template del documento non trovato")
     with open(file = f"{TEMPLATES_DIR}/{document}.tex", mode = "r", encoding = "utf-8") as td:
-        return td.read()
+        template = td.read()
+    return template
 
 def fill_frontespizio(template_path):
     if not os.path.exists(template_path):
@@ -119,6 +120,8 @@ def modify_document():
     elif doc[insert_pos:insert_pos+1] == "\n":
         insert_pos += 1
     doc = doc[:insert_pos] + new_row + doc[insert_pos:]
+
+    # doc = # Identificare il tipo di documento e invocare il modify() corretto
 
     with open(file_path, "w", encoding="utf-8") as f:
         f.write(doc)
